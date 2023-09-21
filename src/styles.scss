@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#container {
+    display: grid;
+    grid-template-areas: 'header header'
+
+        'sidebar informacion';
+}
+
+header {
+
+    grid-area: header;
+}
+
+
+
+#sidebar {
+    grid-area: sidebar;
+
+
+
+}
+
+#informacion {
+    grid-area: informacion;
+}
+
+@media only screen and (max-width: 600px) {
+    #container {
+        display: grid;
+        grid-template-areas: 'header'
+            'sidebar'
+            'informacion';
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #sidebar ul li {
+        width: auto;
+    }
+
+    #sidebar ul {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+}
